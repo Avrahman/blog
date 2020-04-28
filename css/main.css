@@ -1,0 +1,254 @@
+*, div, ul {
+    margin              :   0 auto;
+    padding             :   0px;
+	color			    :  	rgb(115, 102, 156);
+
+	box-sizing			:	border-box;
+}
+
+ul {
+    list-style          :   none;
+}
+
+body {
+    font-family 		:	Verdana;
+    text-align			:	center;
+	font-size			:	1em;
+	font-size-adjust	:	0.5;
+}
+
+.corps  {
+	width               :   70%;
+    position            :   relative;
+	margin				:	0px auto;
+	top					:	0px;
+	background-color	:	 rgb(251, 251, 241);
+}
+
+a   {
+    text-decoration     :   none;
+}
+
+/* //////////////////////// S E C T I O N S   P R I N C I P A L E S  //////////////////////////////////////////////////////////////////// */
+
+header, nav, section, aside, article, footer {
+    box-sizing          :   border-box;
+	display				:	flex;
+    justify-content     :   space-around;   /* enfant de section { display : flex; }   */
+	flex-wrap			:	wrap;
+	padding				:	1%;	
+}
+
+header {
+	padding				:	0.5% 1% 1%;
+}
+
+nav, article, aside {
+	border-radius       :   8px;
+}
+
+section {
+    height              :   65%;
+	display				:	flex;
+	flex-wrap			:	wrap;
+}
+
+aside {
+    width               :   30%;
+}
+
+article {
+    width              	:   70%;
+	box-sizing			:	border-box;
+	padding-left		:	0%;
+}
+
+footer {
+	position			:	relative;
+	bottom				:	0%;
+	border				:	1px solid red;
+
+}
+
+/* //////////////////// S E C T I O N S   D E   H E A D E R ///////////////////*/
+
+nav {
+	width				:	100%;
+	font-size           :   1.3em;
+}
+
+/* ----------- H E A D E R   D I V  & sections ----------*/
+/*************** Entête ***************/
+#entete_id {
+	width				:	100%;
+	height				:	75%;
+
+	display				:	flex;
+	justify-content		:	space-around;
+}
+
+/********* Entête : sous-blocs ********/
+#titre {
+	box-sizing			:	border-box;
+	margin				:	0%;
+	width				:	60%;
+	padding				:	2% 0.2%;
+}
+
+/*** Entête : sous-blocs, elementq ****/
+
+
+#titre1 {
+	font-family			:	Georgia;
+    font-size           :   3em;
+	font-weight			:	bold;
+	letter-spacing		:	0.3em;
+	text-shadow			:	-1px 3px 8px rgba(89, 89, 89, 0.5);
+}
+
+
+/* ----------- H E A D E R   N A V  & sections ----------*/
+
+nav ul {
+    height              :   100%;
+	width				:	100%;
+
+	display				:	flex;
+	justify-content		:	space-around;
+
+	background-color    :   rgba(194, 179, 255, 0.2);
+	border-radius		:	5px;
+}
+
+nav ul li {
+    height              :   100%;
+	width				:	300px;
+}
+
+/* ///////////// B L O C S   D E   S E C T I O N  & Sous sections /////////////*/
+/* ------------- A s I d E  & Sous sections -------------*/
+
+aside h3 {
+    margin              :   8%;
+    margin-left         :   4%;
+    text-align          :   left;
+}
+
+aside ul {
+	padding				:	15% 2% 20%;
+	text-align			:	left;
+	background-color	:	rgba(255, 255, 255, 0.01);
+}
+
+aside ul li {
+    padding             :   2% 2% 2% 8%;
+}
+
+/* ----------- A R T I C L E  & Sous sections -----------*/
+
+article div {
+    width				:	100%;
+	box-sizing			:	border-box;
+	padding				:	0% 1%;
+}
+
+#article_id {
+	display				:	flex;
+	justify-content		:	space-around;
+}
+
+article p {
+    text-indent         :   1.5em;
+}
+
+/* ///////// G E R E R   A F F I C H A G E   B L O C   S E C T I O N //////////*/
+/* ------ ARTICLE  & ASIDE : Gestion de l'affichage -----*/
+
+/* ////////////////////////// F O O T E R S ////////////////////////////////*/
+/********* Entête-pied-de-page ********/
+
+footer  p {
+	padding				:	1%;
+    width               :   100%;
+	background-color	:	rgba(255, 255, 255, 0.2);
+	border-radius		:	2%;
+    font-size			:	1.1em;
+}
+
+/* ////////////////////// P A R A G R A P H E S ////////////////////////////*/
+
+p { 
+   font-size           :   1em;
+}
+
+/* /////////////////////// F O R M  ** C O N T A C T ////////////////////////*/
+
+fieldset {
+    padding             :   3%;
+    border-radius       :   8px;
+}
+
+legend {
+    margin              :   0.1em 1em;
+    padding             :   0.25em 0.5em;
+    font                :   1.3em Helvetica, Geneva, Arial, Georgia, sans-serif;
+}
+
+label, input, textarea {
+    margin-bottom       :   10px;
+    box-sizing          :   border-box;
+}
+
+label {
+    float               :   left;
+    width			    :	38%;
+    text-align          :   right;
+}
+
+input,textarea {
+    padding-right       :   10px;
+    padding-left        :   10px;
+    width			    :	58%;
+    border-bottom       :   solid 1px rgba(255, 255, 255, 0.4);
+    border-right        :   solid 1px rgba(255, 255, 255, 0.4);
+    border-radius       :   4px;
+    background-color    :   rgba(194, 179, 255, 0.2);
+}
+
+.btn {
+    width               :   25%;
+	height				:	30px;
+    margin              :   2em 0em 0em;
+	border-radius		:	10px;
+	color				:	rgb(255, 255, 255);
+	font-weight			:	bold;
+	background			:	linear-gradient(rgb(150, 150, 60), rgb(90, 90, 0), rgb(150, 150, 60));
+	
+	background			:	linear-gradient(rgb(194, 179, 255), rgb(128, 101, 207), rgb(194, 179, 255));
+	
+	transition			:	background 3s;
+}
+
+.btn:hover {
+	background			:	linear-gradient(rgb(128, 101, 207), rgb(194, 179, 255), rgb(128, 101, 207));
+	color				:	rgb(255, 255, 255);
+}
+
+/*********** Mini formulaire **********/
+
+.form {
+/*	width				:	50%;*/
+}
+
+.form_hr {
+	width				:	30%;
+	margin				:	2% 2% 3%;
+}
+
+h3, h4 {
+	font-family			:	georgia;
+}
+
+fieldset div h3 {
+	font-size			:	1.8em;
+}
