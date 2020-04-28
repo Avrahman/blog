@@ -1,3 +1,11 @@
+<?php
+	$titre = "Titre de l'article";
+	$lastUpdate = "Dernière modif";
+	$chapo	= "Premières lignes";
+	$lik	= "URL";
+	$linkText = "Link display text";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -7,7 +15,7 @@
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="images/icon.gif">
-		<title> Index </title>
+		<title> Liste des blog posts </title>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
@@ -34,7 +42,7 @@
 				</div>
 				<nav>
 					<ul>
-						<li> <a href="blog_post_list.php"> Articles </a> </li>
+						<li> <a href="index.php"> Accueil </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
 						<li> <a href="contact.php"> Contact </a> </li>
@@ -44,15 +52,16 @@
 
             <section>
                 <article id="article_id">
+<?php
+echo<<<end
 					<ul>
-						<li> <a href="blog_post_list.php"> Liste des blogs posts </a> </li>
-						<li> Affichage d un blog post </a> </li>
-						<li> Ajout blog post </a> </li>
-						<li> Modifier blog post </a> </li>
-						<li> Modifier/Supprimer blog post ?? </a> </li>
-						<li> Authentification des utilisateurs </a> </li>
-						<li> <a href="contact.php"> Contact </a> </li>
+						<li> $titre </a> </li>
+						<li> $lastUpdate </a> </li>
+						<li> $chapo </a> </li>
+						<li> <a href=$lik> $linkText </a> </li>
 					</ul>
+end;
+?>
                 </article>
 
             </section>
@@ -60,10 +69,10 @@
             <footer>
 				<nav>
 					<ul>
-						<li> <a href="blog_post_list.php"> Articles </a> </li>
+						<li> <a href="index.php"> Accueil </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
-						<li>  <a href="contact.php"> Contact </a> </li>
+						<li> <a href="contact.php"> Contact </a> </li>
 					</ul>
 				</nav>
 				<a class="legales"> Mon C. V. </a>

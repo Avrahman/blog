@@ -48,17 +48,17 @@ nav, article, aside {
 }
 
 section {
-    height              :   65%;
+    height              :   30%;
 	display				:	flex;
 	flex-wrap			:	wrap;
 }
 
 aside {
-    width               :   30%;
+    width               :   25%;
 }
 
 article {
-    width              	:   70%;
+    width              	:   100%;
 	box-sizing			:	border-box;
 	padding-left		:	0%;
 }
@@ -66,7 +66,7 @@ article {
 footer {
 	position			:	relative;
 	bottom				:	0%;
-	border				:	1px solid red;
+	border				:	1px solid rgba(255, 0, 0, 0.2);
 
 }
 
@@ -87,7 +87,16 @@ nav {
 	justify-content		:	space-around;
 }
 
-/********* Entête : sous-blocs ********/
+
+#logo, #titre, #infos {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+#logo {
+    padding: 2% 2% 0%;
+}
+
 #titre {
 	box-sizing			:	border-box;
 	margin				:	0%;
@@ -95,12 +104,17 @@ nav {
 	padding				:	2% 0.2%;
 }
 
-/*** Entête : sous-blocs, elementq ****/
-
+#infos {
+    width: 20%;
+    height: 50%;
+    border-radius: 8px;
+    padding: 2%;
+	border : 1px solid rgba(89, 89, 89, 0.1);
+}
 
 #titre1 {
 	font-family			:	Georgia;
-    font-size           :   3em;
+    font-size           :   2.5em;
 	font-weight			:	bold;
 	letter-spacing		:	0.3em;
 	text-shadow			:	-1px 3px 8px rgba(89, 89, 89, 0.5);
@@ -135,7 +149,7 @@ aside h3 {
 }
 
 aside ul {
-	padding				:	15% 2% 20%;
+	padding				:	5% 2% 20%;
 	text-align			:	left;
 	background-color	:	rgba(255, 255, 255, 0.01);
 }
@@ -215,6 +229,12 @@ input,textarea {
     background-color    :   rgba(194, 179, 255, 0.2);
 }
 
+.legales {
+    font-style: italic;
+}
+
+
+
 .btn {
     width               :   25%;
 	height				:	30px;
@@ -236,13 +256,18 @@ input,textarea {
 
 /*********** Mini formulaire **********/
 
-.form {
-/*	width				:	50%;*/
+#invite_commentaire {
+	font-size			:	1.2em;
+}	
+
+.form_cacher, .inscription_cacher, .connexion_cacher {
+	display				:	none;
+	margin-bottom		:	1%;
 }
 
-.form_hr {
-	width				:	30%;
-	margin				:	2% 2% 3%;
+.form_afficher, .inscription_afficher, .connexion_afficher {
+	display				:	block;
+	margin-bottom		:	1%;
 }
 
 h3, h4 {

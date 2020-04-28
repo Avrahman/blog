@@ -1,3 +1,7 @@
+<?php
+	$title = "Ajout d'un article";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -7,7 +11,7 @@
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="images/icon.gif">
-		<title> Index </title>
+		<title> <?php echo $title ?> </title>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
@@ -43,16 +47,31 @@
             </header>
 
             <section>
-                <article id="article_id">
-					<ul>
-						<li> <a href="blog_post_list.php"> Liste des blogs posts </a> </li>
-						<li> Affichage d un blog post </a> </li>
-						<li> Ajout blog post </a> </li>
-						<li> Modifier blog post </a> </li>
-						<li> Modifier/Supprimer blog post ?? </a> </li>
-						<li> Authentification des utilisateurs </a> </li>
-						<li> <a href="contact.php"> Contact </a> </li>
-					</ul>
+
+				<article id="article_id">
+					<fieldset>
+						<legend> Ajout d'un article </legend>
+						<form action="" method="post">
+<?php
+echo<<<end
+							<label for='heading'> Titre de l'artcle </label>
+								<input type='text' name='heading' placeholder="Saisir le titre de l'article" />
+							<label for='subhead'> chapô </label>
+								<input type='text' name='subhead' placeholder="Insérer le chapô" />
+							<label for='content'> Texte de l'article </label>
+								<textarea name='content'> Insérez ici le contenu de l'article </textarea>
+							<label for='author'> Auteur </label>
+								<input type='text' name='author' placeholder="Sasir le nom de l'auteur" />
+							<label for='update'> Mise à jour </label>
+								<input type='text' name='update' placeholder="Date de mise à jour générée par le système" />
+end;
+?>
+						</form>
+					</fieldset>					
+                </article>
+
+
+
                 </article>
 
             </section>
