@@ -7,7 +7,7 @@
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="images/icon.gif">
-		<title> Contact </title>
+		<title> Admin </title>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
@@ -45,16 +45,16 @@
             <section>
 				<article id="article_id">
 					<fieldset>
-						<legend> Message à l'admin </legend>
+						<legend> Authentification admin </legend>
 						<form action="" method="post">
-							<label for="contact_name"> Nom </label>
-								<input type="text" name="contact_name" placeholder="Nom" />
-							<label for="forename"> Prénom </label>
-								<input type="text" name="contact_forename" placeholder="Prénom" />
-							<label for="contact_email"> Email </label>
-								<input type="text" name="contact_email" placeholder="email" />
-							<label for="message_content"> Message </label>
-								<textarea name="message_content" placeholder="Saisissez votre message"> </textarea>
+							<label for="login"> Login </label>
+								<input type="text" name="login" />
+							<label for="passWord"> Mot de passe </label>
+								<input type="text" name="passWord" />
+
+								<br /> <br />
+
+							<input type="submit" name="admin" value="Envoyer" />
 						</form>
 					</fieldset>					
                 </article>

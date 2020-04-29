@@ -1,12 +1,11 @@
 <?php
-	$title = "Modification d'un article";
-	$heading = "Nouveau titre de l'article";
-	$subhead = "Nouveau chapo pour nouvel article";
-	$content = "Voisi le nouveau article. Le texte est affiché en entier, non seulement du premier  paragraphe, mais ".
+	$title 	= "Modification d'un article";
+	$titre 	= "Ancien titre de article";
+	$image 	= "ancien adresse de l'image";
+	$content = "Ancien tesxte de l'article. Le texte est affiché en entier, non seulement du premier  paragraphe, mais ".
 				"de tout l'articleVoisi le nouveau article. Le texte est affiché en entier, non seulement du premier  paragraphe, mais ".
 				"de tout l'articleVoisi le nouveau";
-	$author = "CetteFoisCiEncore CestMoi";
-	$update = "Ici s'affichera la date de mise à jour";
+	$author = "nom de l'auteur du texte ou de la modification";
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +16,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
+		<link rel="icon" href="../images/icon.gif">
 		<title> <?php echo $title ?> </title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
 	<body>
@@ -58,11 +57,10 @@
 
 					<div>
 						<?php
-							echo("<h1>". $heading ."</h1>");
-							echo("<p>". $subhead ."</p>");
+							echo("<h1>". $titre ."</h1>");
+							echo("<p>". $image ."</p>");
 							echo("<p>". $content ."</p>");
 							echo("<p>". $author ."</p>");
-							echo("<p>". $update ."</p>");
 						?>
 					</div>
 
@@ -72,16 +70,18 @@
 						<form action="" method="post">
 <?php
 echo<<<end
-							<label for='heading'> Titre de l'artcle </label>
-								<input type='text' name='heading' placeholder=$heading />
-							<label for='subhead'> chapô </label>
-								<input type='text' name='subhead' placeholder=$subhead />
-							<label for='content'> Texte de l'article </label>
+							<label for='heading'> Insérer le nouveau titre </label>
+								<input type='text' name='heading' placeholder=$titre />
+							<label for='content'> Modifier le texte de l'article </label>
 								<textarea name='content' placeholder=$content> A changer ? $content </textarea>
-							<label for='author'> Auteur </label>
+							<label for='author'> Auteur de la modification </label>
 								<input type='text' name='author' placeholder=$author />
-							<label for='update'> Mise à jour </label>
-								<input type='text' name='update' placeholder=$update />
+							<label for='image'> Changer l'adresse de l'image </label>
+								<input type='text' name='image' placeholder=$image />
+
+								<br /> <br />
+
+							<input type="submit" name="admin" value="Envoyer" />
 end;
 ?>
 						</form>

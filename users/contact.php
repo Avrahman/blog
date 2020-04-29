@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
-		<title> Index </title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="icon" href="../images/icon.gif">
+		<title> Contact </title>
+		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
 	<body>
@@ -34,25 +34,31 @@
 				</div>
 				<nav>
 					<ul>
-						<li> <a href="users/blog_post_list.php"> Articles </a> </li>
+						<li> <a href="../index.php"> Accueil </a> </li>
+						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
-						<li> <a href="users/contact.php"> Contact </a> </li>
 					</ul>
 				</nav>
             </header>
 
             <section>
-                <article id="article_id">
-					<ul>
-						<li> <a href="blog_post_list.php"> Liste des blogs posts </a> </li>
-						<li> Affichage d un blog post </a> </li>
-						<li> Ajout blog post </a> </li>
-						<li> Modifier blog post </a> </li>
-						<li> Modifier/Supprimer blog post ?? </a> </li>
-						<li> Authentification des utilisateurs </a> </li>
-						<li> <a href="contact.php"> Contact </a> </li>
-					</ul>
+				<article id="article_id">
+					<fieldset>
+						<legend> Message à l'admin </legend>
+						<form action="" method="post">
+							<label for="contact_name"> Nom </label>
+								<input type="text" name="contact_name" placeholder="Nom" />
+							<label for="contact_email"> Email </label>
+								<input type="text" name="contact_email" placeholder="email" />
+							<label for="subject"> Objet du message </label>
+								<input type="text" name="subject" placeholder="Objet du message" />
+							<label for="message_content"> Message </label>
+								<textarea name="message_content" placeholder="Saisissez votre message"> </textarea>
+								<br /> <br />
+							<input type="submit" name="admin" value="Envoyer" />
+						</form>
+					</fieldset>					
                 </article>
 
             </section>
@@ -60,10 +66,10 @@
             <footer>
 				<nav>
 					<ul>
-						<li> <a href="users/blog_post_list.php"> Articles </a> </li>
+						<li> <a href="../index.php"> Accueil </a> </li>
+						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
-						<li> <a href=""> Mes réseaux sociaux </a> </li>
-						<li>  <a href="users/contact.php"> Contact </a> </li>
+						<li> <a href=""> Mes Réseaux sociaux </a> </li>
 					</ul>
 				</nav>
 				<a class="legales"> Mon C. V. </a>

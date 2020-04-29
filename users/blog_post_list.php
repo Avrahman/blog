@@ -14,9 +14,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
+		<link rel="icon" href="../images/icon.gif">
 		<title> Liste des blog posts </title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
 	<body>
@@ -42,7 +42,7 @@
 				</div>
 				<nav>
 					<ul>
-						<li> <a href="index.php"> Accueil </a> </li>
+						<li> <a href="../index.php"> Accueil </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
 						<li> <a href="contact.php"> Contact </a> </li>
@@ -69,7 +69,7 @@ end;
             <footer>
 				<nav>
 					<ul>
-						<li> <a href="index.php"> Accueil </a> </li>
+						<li> <a href="../index.php"> Accueil </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
 						<li> <a href="contact.php"> Contact </a> </li>

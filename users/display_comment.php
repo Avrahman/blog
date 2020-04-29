@@ -16,11 +16,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
+		<link rel="icon" href="../images/icon.gif">
 		<title> <?php echo $title ?> </title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="../css/main.css">
 
-		<script src="biblio/afficher_cacher_form.js">	</script>
+		<script src="../biblio/afficher_cacher_form.js">	</script>
 	</head>
 
 	<body>
@@ -71,30 +71,32 @@
 
 					<div class="form_cacher" id="comment">
 
-						<fieldset>
-							<div class="connexion_cacher" id="connexion_id">
-								<legend> Connexion </legend>
-								<form action="" method="post">
-									<label for="login"> Login </label>
-										<input type="text" name="login" placeholder="Saisir le login" />
-									<label for="passwordl"> Mot de passe </label>
-										<input type="text" name="password" placeholder="Mot de passe" />
-								</form>
-							</div>
+						<fieldset class="connexion_cacher" id="connexion_id">
+							<legend> Connexion </legend>
+							<form action="" method="post">
+								<label for="login"> Login </label>
+									<input type="text" name="login" placeholder="Saisir le login" />
+								<label for="passwordl"> Mot de passe </label>
+									<input type="text" name="password" placeholder="Mot de passe" />
+								<br /> <br />
+								<input type="submit" name="admin" value="Envoyer" />
+							</form>
+						</fieldset>
 
-							<div class="inscription_cacher" id="inscription_id">
-								<legend> Inscription </legend>
-								<form action="" method="post">
-									<label for="user_name"> Nom </label>
-										<input type="text" name="user_name" placeholder="Nom" />
-									<label for="login"> Login </label>
-										<input type="text" name="login" placeholder="Saisir le login" />
-									<label for="email"> Email </label>
-										<input type="text" name="email" placeholder="email" />
-									<label for="passwordl"> Mot de passe </label>
-										<input type="text" name="password" placeholder="Mot de passe" />
-								</form>
-							</div>
+						<fieldset class="inscription_cacher" id="inscription_id">
+							<legend> Inscription </legend>
+							<form action="" method="post">
+								<label for="user_name"> Nom </label>
+									<input type="text" name="user_name" placeholder="Nom" />
+								<label for="login"> Login </label>
+									<input type="text" name="login" placeholder="Saisir le login" />
+								<label for="email"> Email </label>
+									<input type="text" name="email" placeholder="email" />
+								<label for="passwordl"> Mot de passe </label>
+									<input type="text" name="password" placeholder="Mot de passe" />
+								<br /> <br />
+								<input type="submit" name="admin" value="Envoyer" />
+							</form>
 						</fieldset>
 					</div>
 				</div>

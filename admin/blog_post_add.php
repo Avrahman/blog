@@ -10,9 +10,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
 		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
+		<link rel="icon" href="../images/icon.gif">
 		<title> <?php echo $title ?> </title>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
 	<body>
@@ -56,14 +56,16 @@
 echo<<<end
 							<label for='heading'> Titre de l'artcle </label>
 								<input type='text' name='heading' placeholder="Saisir le titre de l'article" />
-							<label for='subhead'> chapô </label>
-								<input type='text' name='subhead' placeholder="Insérer le chapô" />
 							<label for='content'> Texte de l'article </label>
 								<textarea name='content'> Insérez ici le contenu de l'article </textarea>
 							<label for='author'> Auteur </label>
 								<input type='text' name='author' placeholder="Sasir le nom de l'auteur" />
-							<label for='update'> Mise à jour </label>
-								<input type='text' name='update' placeholder="Date de mise à jour générée par le système" />
+							<label for='image'> Adresse de l'image </label>
+								<input type='text' name='image' placeholder="Insérer l'adresse de l'image" />
+
+								<br /> <br />
+
+							<input type="submit" name="postAdd" value="Envoyer" />
 end;
 ?>
 						</form>

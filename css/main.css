@@ -27,6 +27,7 @@ body {
 
 a   {
     text-decoration     :   none;
+	color				:	blue;
 }
 
 /* //////////////////////// S E C T I O N S   P R I N C I P A L E S  //////////////////////////////////////////////////////////////////// */
@@ -163,7 +164,7 @@ aside ul li {
 article div {
     width				:	100%;
 	box-sizing			:	border-box;
-	padding				:	0% 1%;
+	padding				:	0%;
 }
 
 #article_id {
@@ -220,13 +221,24 @@ label {
 }
 
 input,textarea {
+    width			    :	58%;
     padding-right       :   10px;
     padding-left        :   10px;
-    width			    :	58%;
-    border-bottom       :   solid 1px rgba(255, 255, 255, 0.4);
-    border-right        :   solid 1px rgba(255, 255, 255, 0.4);
     border-radius       :   4px;
     background-color    :   rgba(194, 179, 255, 0.2);
+}
+
+textarea {
+    border-right        :   solid 1px rgba(255, 255, 255, 0.4);
+    border-bottom       :   solid 1px rgba(255, 255, 255, 0.4);
+}
+
+input[type="radio"]  {
+    width			    :	0.1%;
+}
+
+input[type="submit"]  {
+    width			    :	15%;
 }
 
 .legales {
