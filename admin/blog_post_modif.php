@@ -67,7 +67,7 @@
 				<article id="article_id">
 					<fieldset>
 						<legend> Mise à jour d'un article </legend>
-						<form action="" method="post">
+						<form action="" method="post" enctype="multipart/form-data">
 <?php
 echo<<<end
 							<label for='heading'> Insérer le nouveau titre </label>
@@ -78,6 +78,8 @@ echo<<<end
 								<input type='text' name='author' placeholder=$author />
 							<label for='image'> Changer l'adresse de l'image </label>
 								<input type='text' name='image' placeholder=$image />
+							<label for='ajouet_image'> Ajouter une image </lable>
+								<input type='file' name='une_image' /> 
 
 								<br /> <br />
 

@@ -1,17 +1,9 @@
-<?php
-	$title = "Ajout d'un article";
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
-		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="../images/icon.gif">
-		<title> <?php echo $title ?> </title>
+		<title> Traitement ajout blog post </title>
 		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
@@ -47,33 +39,42 @@
             </header>
 
             <section>
-
 				<article id="article_id">
+
 					<fieldset>
 						<legend> Ajout d'un article </legend>
-						<form action="../src/blog_post_add_parse.php" method="post" enctype="multipart/form-data">
-							<label for='heading'> Titre de l'artcle </label>
-								<input type='text' name='heading' placeholder="Saisir le titre de l'article" />
-							<label for='content'> Texte de l'article </label>
-								<textarea name='content'> Insérez ici le contenu de l'article </textarea>
-							<label for='author'> Auteur </label>
-								<input type='text' name='author' placeholder="Sasir le nom de l'auteur" />
-							<label for='image'> Adresse de l'image </label>
-								<input type='text' name='image' placeholder="Insérer l'adresse de l'image" />
-							<label for='ajouet_image'> Ajouter une image </lable>
-								<input type='file' name='une_image' />
+<?php
+	if(isset($_POST['heading']) && isset($_POST['content']) && isset($_POST['author'])) {
+		$heading = htmlspecialchars($_POST['heading']);
+		$content = htmlspecialchars($_POST['content']);
+		$author = htmlspecialchars($_POST['author']);
+	}
 
-								<br /> <br />
+	echo('heading : '	.$heading."<br />");
+	echo('content : '	.htmlspecialchars_decode($content)."<br />");
+	echo('author : '.$author."<br />");
 
-							<input type="submit" name="postAdd" value="Envoyer" />
-						</form>
-					</fieldset>					
+	$correct = false;
+	if(isset($_FILES['une_image']) && $_FILES['une_image']['error'] == 0) {
+		if($_FILES['une_image']['size'] <50001) {
+			$correct = true;
+		} else {
+			$correct = false;
+		}
+		if($_FILES['une_image']['extension'] == ".png" || $_FILES['une_image']['extension'] == ".jpg" || $_FILES['une_image']['extension'] == ".jpeg") {
+			$correct = true;
+		} else {
+			$correct = false;
+		}
+		if($correct) {
+			move_uploaded_file($_FILES['une_image']['tmp_name'], 'upload/'.basename($_files['une_image']['name']));
+			echo("Le fichier a été correctement envoyé !");
+		}
+	}
+?>
+					</fieldset>
+
                 </article>
-
-
-
-                </article>
-
             </section>
 
             <footer>

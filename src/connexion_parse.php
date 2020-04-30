@@ -2,12 +2,8 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
-		<meta name="author" content="Abderahmane REDOUANE">
-		<link rel="icon" href="images/icon.gif">
-		<title> Admin </title>
+		<link rel="icon" href="../images/icon.gif">
+		<title> Inscription parse </title>
 		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
@@ -17,7 +13,7 @@
 				<div id="entete_id">
 					<div id="logo">
 						<p> Abderahmane REDOUANE </p>
-						<img src="images/icon_gde.gif" alt="logo" />
+						<img src="../images/icon_gde.gif" alt="logo" />
 					</div>
 				
 
@@ -34,40 +30,44 @@
 				</div>
 				<nav>
 					<ul>
-						<li> <a href="index.php"> Accueil </a> </li>
 						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
+						<li> <a href="contact.php"> Contact </a> </li>
 					</ul>
 				</nav>
             </header>
 
             <section>
-				<article id="article_id">
-					<fieldset>
-						<legend> Authentification </legend>
-						<form action="../src/admin_parse.php" method="post">
-							<label for="login"> Login </label>
-								<input type="text" name="login" />
-							<label for="passWord"> Mot de passe </label>
-								<input type="text" name="passWord" />
+                <article>
+					<div>
+						<fieldset>
+							<legend> Connexion </legend>
 
-								<br /> <br />
 
-							<input type="submit" name="admin" value="Envoyer" />
-						</form>
-					</fieldset>					
+<?php
+
+	if(isset($_POST['login']) && isset($_POST['password'])) {
+				$login = htmlspecialchars($_POST['login']);
+				$password = htmlspecialchars($_POST['password']);
+	}
+	echo("Login : ".$login."<br />");
+	echo("Password : ".$password."<br />");
+?>
+						</fieldset>
+					</div>
+				
+
                 </article>
-
             </section>
 
             <footer>
 				<nav>
 					<ul>
-						<li> <a href="index.php"> Accueil </a> </li>
 						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
-						<li> <a href=""> Mes Réseaux sociaux </a> </li>
+						<li> <a href=""> Mes réseaux sociaux </a> </li>
+						<li> <a href="contact.php"> Contact </a> </li>
 					</ul>
 				</nav>
 				<a class="legales"> Mon C. V. </a>

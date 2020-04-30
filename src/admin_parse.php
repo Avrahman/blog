@@ -2,13 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
-		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="images/icon.gif">
-		<title> Index </title>
-		<link rel="stylesheet" href="css/main.css">
+		<title> Admin identification parse </title>
+		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
 	<body>
@@ -34,25 +30,29 @@
 				</div>
 				<nav>
 					<ul>
-						<li> <a href="public/blog_post_list.php"> Articles </a> </li>
+						<li> <a href="index.php"> Accueil </a> </li>
+						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
 						<li> <a href=""> Mes réseaux sociaux </a> </li>
-						<li> <a href="public/contact.php"> Contact </a> </li>
 					</ul>
 				</nav>
             </header>
 
             <section>
-                <article id="article_id">
-					<ul>
-						<li> <a href="public/blog_post_list.php"> Liste des blogs posts </a> </li>
-						<li> Affichage d un blog post </a> </li>
-						<li> Ajout blog post </a> </li>
-						<li> Modifier blog post </a> </li>
-						<li> Modifier/Supprimer blog post ?? </a> </li>
-						<li> Authentification des utilisateurs </a> </li>
-						<li> <a href="public/contact.php"> Contact </a> </li>
-					</ul>
+				<article id="article_id">
+					<fieldset>
+						<legend> Admin authentification </legend>
+
+<?php
+	if(isset($_POST['login']) && isset($_POST['passWord'])) {
+		$admin_name = htmlspecialchars($_POST['login']);
+		$password = htmlspecialchars($_POST['passWord']);
+	}
+
+	echo("Admin name : <b>".$admin_name."</b><br>");
+	echo("Mot de passe : <b>".$password."</b><br>");
+?>
+					</fieldset>					
                 </article>
 
             </section>
@@ -60,10 +60,10 @@
             <footer>
 				<nav>
 					<ul>
-						<li> <a href="public/blog_post_list.php"> Articles </a> </li>
+						<li> <a href="index.php"> Accueil </a> </li>
+						<li> <a href="blog_post_list.php"> Articles </a> </li>
 						<li> <a href=""> Mon C. V. </a> </li>
-						<li> <a href=""> Mes réseaux sociaux </a> </li>
-						<li>  <a href="public/contact.php"> Contact </a> </li>
+						<li> <a href=""> Mes Réseaux sociaux </a> </li>
 					</ul>
 				</nav>
 				<a class="legales"> Mon C. V. </a>

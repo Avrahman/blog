@@ -2,12 +2,8 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Blog de fin de stage Programmeur PHP-Symfony">
-		<meta name="author" content="Abderahmane REDOUANE">
 		<link rel="icon" href="../images/icon.gif">
-		<title> Contact </title>
+		<title> Contact parse </title>
 		<link rel="stylesheet" href="../css/main.css">
 	</head>
 
@@ -17,7 +13,7 @@
 				<div id="entete_id">
 					<div id="logo">
 						<p> Abderahmane REDOUANE </p>
-						<img src="images/icon_gde.gif" alt="logo" />
+						<img src="../images/icon_gde.gif" alt="logo" />
 					</div>
 				
 
@@ -45,19 +41,21 @@
             <section>
 				<article id="article_id">
 					<fieldset>
-						<legend> Message à l'admin </legend>
-						<form action="" method="post">
-							<label for="contact_name"> Nom </label>
-								<input type="text" name="contact_name" placeholder="Nom" />
-							<label for="contact_email"> Email </label>
-								<input type="text" name="contact_email" placeholder="email" />
-							<label for="subject"> Objet du message </label>
-								<input type="text" name="subject" placeholder="Objet du message" />
-							<label for="message_content"> Message </label>
-								<textarea name="message_content" placeholder="Saisissez votre message"> </textarea>
-								<br /> <br />
-							<input type="submit" name="admin" value="Envoyer" />
-						</form>
+						<legend> Lecture du message </legend>
+<?php
+	if(isset($_POST['contact_name']) && isset($_POST['contact_email'])
+			&& isset($_POST['subject']) && isset($_POST['message_content']) {
+				$nom = htmlspecialchars($_POST['contact_name']);
+				$email = htmlspecialchars($_POST['contact_email']);
+				$sujet = htmlspecialchars($_POST['subject']);
+				$contenu = htmlspecialchars($_POST['message_content']);
+	}
+	echo("Nom : ".$nom."<br />");
+	echo("Email : ".$email."<br />");
+	echo("Sujet : ".$sujet."<br />");
+	echo("Contenu : ".$contenu."<br />");
+
+?>
 					</fieldset>					
                 </article>
 
